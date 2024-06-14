@@ -1,13 +1,16 @@
+import { Card } from './components/Card'
+import { DetailsPerfil } from './components/DetailsPerfil'
+import { Seach } from './components/Seach'
 
 function App() {
 
 
   return (
-    <>
-        <h1 className="bg-red-500">
-      Hello world!
-    </h1>
-    </>
+    <div className='min-h-screen bg-[#20293A]'>
+      <Seach />
+      <DetailsPerfil />
+      <Card/>
+    </div>
   )
 }
 
