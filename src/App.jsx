@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from './components/Card';
 import { DetailsPerfil } from './components/DetailsPerfil';
 import heroImagen from './assets/hero-image-github-profile.png';
@@ -32,6 +32,19 @@ function App() {
       console.error('Error fetching user repositories:', error.message);
     }
   };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      fetchUser();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  });
 
   return (
     <div className='min-h-screen bg-[#20293A]'>

@@ -23,7 +23,7 @@ export const DetailsPerfil = ({ data }) => {
             <span>{data.following}</span>
           </div>
 
-          <div className=' bg-[#111729] px-4 py-2  rounded-lg md:w-60 md:ml-4 mt-2 md:mt-5 flex items-center text-2xl'>
+          <div className=' bg-[#111729] px-4 py-2  rounded-lg md:w-60 md:ml-4 mt-2 md:mt-5 mb-5 flex items-center text-2xl'>
             <span className='mr-2 font-normal text-[#4a5366]'>Location:</span>
             <span>{data.location}</span>
           </div>
